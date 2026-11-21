@@ -73,3 +73,14 @@ print("| Retriever | recall@3 | queries missed |")
 print("|---|---|---|")
 for name, r, missed in rows:
     print(f"| {name} | {r:.2f} | {', '.join(missed) or 'none'} |")
+
+Evaluation
+Configuration:
+
+chunk_text(..., max_chars=500, overlap=50)
+HashingEmbedder()
+Retriever	Recall@3
+BM25	0.917
+Dense	0.917
+Hybrid	0.917
+Evaluated on the 12 public queries in data/queries.jsonl.
